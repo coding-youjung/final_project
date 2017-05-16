@@ -1,0 +1,5 @@
+<script>
+  firebase.auth().onAuthStateChanged(function(user) {
+    console.log("current_user = ", firebase.auth().currentUser)
+  });
+</script>

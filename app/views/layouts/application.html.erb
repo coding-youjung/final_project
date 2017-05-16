@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HrSnapchat</title>
+  <%= csrf_meta_tags %>
+
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+  <script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCAMdRCwnwAmzcpfcjpeWwG-VTmNKWT9wM",
+    authDomain: "hr-snapchat.firebaseapp.com",
+    databaseURL: "https://hr-snapchat.firebaseio.com",
+    projectId: "hr-snapchat",
+    storageBucket: "hr-snapchat.appspot.com",
+    messagingSenderId: "30747021625"
+  };
+  firebase.initializeApp(config);
+  </script>
+</head>
+
+<body>
+  <div>
+    <button onclick="signIn()">SIGN IN</button>
+    <button onclick="signOut()">SIGN OUT</button>
+  </div>
+  <div>
+    <%= yield %>
+  </div>
+</body>
+</html>

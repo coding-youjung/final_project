@@ -1,0 +1,13 @@
+<script>
+  firebase.auth().onAuthStateChanged(function(user) {
+  user = firebase.auth().currentUser;
+    if (user) {
+      alert("USER SIGNED IN")
+      console.log(user)
+      var userId = firebase.auth().currentUser.uid;
+      console.log(userId)
+    } else {
+      alert("USER NOT SIGNED IN")
+    }
+  });
+</script>
